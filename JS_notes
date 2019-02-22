@@ -1,0 +1,100 @@
+Javascript is a programming language created for the web.
+HTML & CSS are markup languages. Markup languages are used to describe and define elements within a document.
+JavaScript is a programming language. Programming languages are used to communicate instructions to a machine.
+Programming languages can be used to control the behavior of a machine and to express algorithms.
+Javascript was made in just 10 days
+Recent verions of javascript are referenced by their ECMAScript like ES5, ES6, ES2016
+Use Google Chrome's developer tools to access the Javascript console.
+link to shortcuts for developer tools: https://developers.google.com/web/tools/chrome-devtools/shortcuts
+Developer tools are often used as a sandbox (a place to test your code without any long term consequences.). You can use it to debug problems you've run into or test a new piece of code.
+console.log is used to display content to the JavaScript console.
+All major browsers come with built in javascript engines: this allows the browsers to run and execute javascript code.
+cosole.log() writes a message on the console.
+
+JS code must be inserted between <script> tags with "src" attribute as the path if code is written in seperate file.
+
+To access an HTML element, JavaScript can use the document.getElementById(id) method.
+Changing the "innerHTML" property of an HTML element is a common way to display data in HTML.
+Using document.write() after an HTML document is loaded, will delete all existing HTML. The document.write() method should only be used for testing.
+Using window.alert() you can use an alert box to display data.
+For debugging purposes, you can use the console.log() method to display data.
+
+Ending statements with semicolon is not required, but highly recommended.
+JavaScript programmers tend to use camel case that starts with a lowercase letter.
+
+What is JavaScript Bitwise Operators?
+
+JavaScript has dynamic types. This means that the same variable can be used to hold different data types.
+JavaScript evaluates expressions from left to right. Different sequences can produce different results. Like:
+var x = 16 + 4 + "Volvo";
+will give output, 20Volvo however,
+var x = "Volvo" + 16 + 4;
+will give output, Volvo164.
+
+JavaScript arrays are written with square brackets. Array items are separated by commas. Type of Js array is "object".
+
+JavaScript objects are written with curly braces. Object properties are written as name:value pairs, separated by commas.
+Objects can also have methods. Methods are actions that can be performed on objects. Methods are stored in properties as function definitions.
+
+A JavaScript function is a block of code designed to perform a particular task. A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+Function names can contain letters, digis, underscores, and dollar signs (same rules as variables). The parentheses may include parameter names separated by commas: (parameter1, parameter2, ...)
+The code to be executed, by the function, is placed inside curly brackets: {}.
+Variables declared within a JavaScript function, become LOCAL to the function. Local variables can only be accessed from within the function.
+
+The this Keyword
+var person = {
+    firstName: "John",
+    lastName : "Doe",
+    id       : 5566,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+In a function definition, this refers to the "owner" of the function. In the example above, this is the person object that "owns" the fullName function.
+In other words, this.firstName means the firstName property of this object.
+When used alone, this refers to the Global object. In a  browser the Global object is [object Window].
+
+Common HTML Events:
+onchange	         An HTML element has been changed
+onclick	           The user clicks an HTML element
+onmouseover	       The user moves the mouse over an HTML element
+onmouseout	       The user moves the mouse away from an HTML element
+onkeydown	         The user pushes a keyboard key
+onload	           The browser has finished loading the pageonchange	An HTML element has been changed
+onclick	           The user clicks an HTML element
+onmouseover	       The user moves the mouse over an HTML element
+onmouseout	       The user moves the mouse away from an HTML element
+onkeydown	         The user pushes a keyboard key
+onload	           The browser has finished loading the page
+
+JavaScript does not support arrays with named indexes or associative arrays.
+
+The join() method also joins all array elements into a string. It behaves just like toString(), but in addition you can specify the separator. Like Array.join(" / ").
+
+If you are repeating the else if statement, where each condition is based on the same value, use a switch statement.
+ Here we do not have conditional statements. Instead, we switch which piece of code is executed based on value.
+
+Syntax:
+ switch (option){
+   case 1:
+     console.log("You selected option 1");
+     break;
+   case 2:
+     console.log("You selected option 2");
+     break;
+   case 3:
+     console.log("You selected option 3");
+     break;
+   case 4:
+     console.log("You selected option 4");
+     break;
+   default:
+     console.log("This is the default output");
+ }
+
+The break statement prevents the control from "falling through" to the other case clauses.
+The default case is executed when none of the cases match the value of the switch expression.
+You can also use "output += something" in the place of console.log to take advantage of the falling through characteristic of switch statements.
+
+In JS the var is scoped to the nearest function, and that is available anywhere inside that function.
+

@@ -1,0 +1,14 @@
+HTML:
+An element consist of the <opening tag> , some content and </closing tag>.
+Some elements like images are some what different.
+<!-- comments for html -->
+
+CSS:
+ruleset: consist of 2 parts,
+      1. selector: selects the html element to be styled {
+        2. Decleration: describes the style, inside curly braces
+      }
+/* comments for CSS*/
+we can also use attributes like "id" and "class" as selectors instead of html tags.
+id: one element can only have 1 id also 1 id can be used once per html page, to select id attribute in use #id_name.
+class: can be added to multiple html element and elements can have nultiple classes, to select class attribute in use .class_name.

@@ -1,0 +1,112 @@
+git help <action>:
+  takes to the manual page of the action
+
+git --version:
+  pronts the version of th git
+
+git config --global:
+  it points to a address in git
+
+git init:
+  it creates a git repository in local wd
+
+git remote add origin <url>:
+  it connects to a remote server in git, where origin
+  refers to the root of the project mentioned in the url
+
+git pull origin master:
+  pulls the current project fro origin and the branch master in origin
+
+git status:
+  checks the status of the local repository, like the untracked files
+
+git add (-A for all):
+  add the the mentioned files for commit
+
+git push -u origin master:
+  pushes the commited part to the master branch in
+  origin (-u is to detup the remote upstream link if we haven't set it up
+  earlier)
+
+touch .gitignore:
+  creates a text file which contains names of files that we don't want to
+  track, we can use glob syntaxes here too. we nee to commit .gitignore
+  file too.
+
+git clone <url> <directory>:
+  copy a project from the url to the directory mentioned
+
+git remote -v:
+  gives the address to fetch and from push
+
+git branch -a:
+  gives all the branches for both lacal and remote
+
+git diff:
+  prints all the changes done after the add
+
+git branch <name>:
+  creates a new branch in local
+
+git checkout <branch name>:
+  switch the workin branch
+
+git branch --merged:
+  gives the branches which are previously merged
+
+git merge <branch name>:
+  merges the branch mentioned with the master branch.
+  it's preffered that we pull the master before a merge
+
+git branch -d <branch name>:
+  delete the branch mentioned from local to the working branch
+
+git push origin --delete <branch name>:
+  delete the branch mentioned from origin in the remote repository
+
+git checkout <filename>:
+  undo the changes after commit
+
+git commit --amend:
+  it will do the changes tracked or change the commit message <-m ""> without
+  adding an extra commit. however it changes the git hiostory since the hash#
+  will be changed. so it is not ideal when working eith multiple contributors.
+
+git log:
+  gives the log. <--stat> gives detailed log.
+
+git cherry-pick <5-6 digits of hash#>:
+  used to do the same commit. to do the same commits in another branch 1st
+  checkout to that branch and cherry-pick <hash #>. it dosen't delete previous
+  commit.
+
+git reset:(will change the history)
+  <--soft hash#>  will reset the commits after the hash# mentioned but will keep
+                  the changes in the staging area.
+  <hash#>         by default it will do a mix reset which will keep the file but
+                  not in the staging area as untracked changes.
+  <--hard hash#>  will revert all the tracked changes after the hash# mentioned,
+                  but it will keep the untracked changes.
+
+git clean -df:
+  will clean up all the untracked directories(d) and files(f)
+
+steps to retrive something after being rest:
+  01| git reflog:
+          gives the log of all the commits done with hash#
+  02| git checkout <hash#>
+          retrive till the hash#
+  03| git branch <backup name>
+          saves the retrive in a backup branches
+
+git revert <hash#>:(will not corrupt the history for other user)
+  it will revert the commit mentioned, but will not corrupt the history for
+  others.
+
+solved a conflit
+
+git stash:
+  it's a way to store dat in temp location and clean up the working directory
+
+future works: ci/cd, runner, docker, tags, services, base docker workin with runner, issues, milestone
+

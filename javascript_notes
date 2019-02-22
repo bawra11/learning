@@ -1,0 +1,268 @@
+QUESTIONS:
+  How does string comparison work with ASCII values?
+
+
+-------------------------------------
+JAVASCRIPT NOTES
+
+LESSON 1:INTRODUCTION:
+  Javascript is a programming language created for the web.
+  HTML & CSS are markup languages. Markup languages are used to describe and define elements within a document.
+  JavaScript is a programming language. Programming languages are used to communicate instructions to a machine.
+  Programming languages can be used to control the behavior of a machine and to express algorithms.
+  Javascript was made in just 10 days
+  Recent verions of javascript are referenced by their ECMAScript like ES5, ES6, ES2016
+  Use Google Chrome's developer tools to access the Javascript console.
+  link to shortcuts for developer tools: https://developers.google.com/web/tools/chrome-devtools/shortcuts
+  Developer tools are often used as a sandbox (a place to test your code without any long term consequences.). You can use it to debug problems you've run into or test a new piece of code.
+  console.log is used to display content to the JavaScript console.
+  All major browsers come with built in javascript engines: this allows the browsers to run and execute javascript code.
+  cosole.log() writes a message on the console.
+
+
+LESSON 2: DATA TYPES AND VARIABLES
+    Datatypes: Numbers, booleans, string
+    Comments: //, /*
+    Variables:s
+      syntax: var variable_name = value;
+      use camelCase for variable names.
+
+
+    String Index: "James"[0] will return "J".
+
+    Escaping Strings: Use backslash to escape quotes other characters. Escape characters tell javascript to ignore the special meaning of a character and just use the literal value of the character.
+    Eg. "The man whispered, \"please speak to me.\"
+    datatypes:
+     Numbers
+     Strings
+     booleans
+     null
+     undefined
+
+    Comparing Strings:
+      strings are compared usign ASCII values.
+      small letters have a higher ASCII value compared to corresponding capital letter.
+
+
+
+
+    null and undefined are datatyped.
+    null: value of nothing. You can set the value of a variable to null the same way you can set the value of a variable to 10.
+          variable with value of nothing
+          variable will return the value null if there null is assigned to it.
+    undefined: absence of value.
+               value is undefined, it's not even a value of nothing.
+               The variable will return undefined it nothing is assigned to it
+
+   IMPLICIT TYPE COERCION:
+   Javascript is a loosely typed language, i.e you don't need to specify data types while writing code.
+   When the code is interpreted by the the javascript engine, it automatically converts it into the "appropriate" datatype (type coercion)
+    A strongly typed language is a programming language that is more likely to generate errors if data does not closely match an expected type.
+
+
+  STRICT EQUALITY(===):
+    Checks if numbers, strings or booleans are identical in value AND type
+
+
+LESSON 3: CONDITIONALS
+  if..esle statements:
+
+    if (condition){
+      code-block;
+    }else{
+      code-block;
+    }
+
+  else if statements:  Used when there are more than two conditions.
+  var weather = "sunny";
+
+  if (weather === "snow") {
+    console.log("Bring a coat.");
+  } else if (weather === "rain") {
+    console.log("Bring a rain jacket.");
+  } else {
+    console.log("Wear what you have on.");
+  }
+
+
+  LOGICAL OPERATORS:
+    and is &&. If the first value is false, you don't need to check what the value of the second condition is. This is called short circuiting.
+    or is ||. &
+    not is !
+
+  truthy and falsy value:
+    A value is falsy if it converts to false when evaluated in a boolean context.
+    list of all of the falsy values:
+the Boolean value false
+the null type
+the undefined type
+the number 0
+the empty string ""
+the odd value NaN (stands for "not a number", check out the NaN MDN article)
+
+
+TERNARY OPERATOR:
+  The ternary operator provides you with a shortcut alternative for writing lengthy if...else statements.
+  conditional ? (if condition is true) : (if conditional is false);
+
+SWITCH STATEMENT:
+  If you are repeating the else if statement, where each condition is based on the same value, use a switch statement.
+  Here we do not have conditional statements. Instead, we switch which piece of code is executed based on value.
+
+  Syntax:
+    switch (option){
+      case 1:
+        console.log("You selected option 1");
+        break;
+      case 2:
+        console.log("You selected option 2");
+        break;
+      case 3:
+        console.log("You selected option 3");
+        break;
+      case 4:
+        console.log("You selected option 4");
+        break;
+      default:
+        console.log("This is the default output");
+    }
+
+  The break statement prevents the control from "falling through" to the other case clauses.
+  The default case is executed when none of the cases match the value of the switch expression.
+  You can also use "output += something" in the place of console.log to take advantage of the falling through characteristic of switch statements.
+
+
+
+LOOPS:
+  There are three pieces that any loop should have.
+    When to start
+    When to end
+    Incrementing or decrementing steps
+
+  while (stop_condition) {
+    code block;
+    incrementig/decrementing step
+  }
+
+  for(start; stop; step) {
+    //do this
+  }
+
+
+
+  x++ : return the value of x and then increment the value.
+  ++x : increment the value of x and then return the value.
+
+
+FUNCTIONS:
+  Reusable chunks of code you can use over and over.
+  You have to explicitly tell the function to return a value.
+  You can get the function to do something by "calling" or "invoking" it with its name.
+  The variables that you set in the brackets while declaring the function are called parameters.
+  The values that you pass while calling the function is called arguments.
+  ***Parameters are always variables names and arguments are always numbers/strings/boolean.
+
+  A function is always going to return something. It will return a value if the it is specified or it will return "undefined" if no return value is specified.
+  When a function is printing something, it is called logging.
+  The return statement does two things:
+    Tells the function what to return
+    Exits the function. This means that only the first return statement is valid.
+
+  Scope of a variable defines where the variable can be accessed.
+
+
+  SHADOWING/OVERRIDING:
+    When the variable takes a value that was defined inside a function even after we have exited the function. i.e the values of the variable is being reassigned inside the fumction and it stays that way.
+    To prevent this use var before the varaible inside the function.
+
+  HOISTING:
+   Functions can be called even before they are declared. This is because, when the program is being interpreted, the function declarations are "hoisted" to the top.
+   Similarly, variable declarations are also hoisted to the top.
+   DISCLAIMER: Variable assignment is not hoisted to the top.
+   To avoid confusion, it is a good idea to make declarations at the top of the code. This way the way the code looks and behaves are consistent with each other.
+
+FUNCTION EXPRESSION:
+  *When a function is stored inside a variable, it is called a fucntion expression.
+  *A function expression is not hoisted because it involves variable assignment. Only variable declarations are hoisted.
+  *When a fuctioin does not have a name, it is called an anonymous function. Since while using a function expression, the function is stored in a variable, naming the function becomes redundant.
+  *You can also have named function expression. To call the function, use the variable name with parantheses, not the function name. Using the function name will give an error.
+  *Add parantheses after the variable name to invoke the function.
+
+
+
+FUNCTION AS PARAMETERS:
+  *A function that is passed into another function is called a callback.
+  INLINE FUNCTION EXPRESSIONS: When you define the function inside the parantheses of another function. This is done when the function is going to be used only once.
+
+
+ARRAYS:
+    You can store multiple types of data in an array.
+    Nested Array: An array with with arrays as elements.
+    To access an element in an array: array_name[index]
+
+    properties of a datastructure: special information about the datastructure.Eg length.
+    methods of a datastructure: special predefined functions that a datastructure can call. Eg., reverse, sort, push, pop
+    You use methods by appending a ".method" to the datastructure.
+
+    PUSH: A method to add an element to the end/right of an array. It also returns the length of an array after adding an element to it.
+      eg., donuts.push("powdered");
+    POP: A method to remove an element from the end/right of an array. It also returns the element that you popped.
+    SPLICE: It is a method that allows you to add and remove elements in an array. It also allows you to specify the position in which you want to add or remove elements.
+      syntax: array.splice(start, delete_count, item1, item2);
+              item1, item2 will be added from start.
+    SHIFT: The shift method removes from the front/left of an array.
+
+    FOREACH:
+      Method to apply a function on each element of an array. But this won't return an array. It actually doesn't return anything.
+      syntax: array_name.forEach(func());
+      The function that you pass in the forEach method can take up three parameters: element, index, array.
+
+    MAP:
+      Method to apply a function on each element of the array. This method creates another array of elements derived by applying the function on each element of the array that was passed.
+      syntax:
+       array.map(func(param){
+        func_definiton
+       })
+
+
+    You can access the individual elements of a 2D array using a nested for loop.
+
+
+
+LESSON 7 OBJECTS:
+  OBJECTS:
+    They allow us to wrap up pieces of related data and functionality into one single container.
+    Objects have properties and methods.
+    Arrays are a special kind of object in Javascript.It has properties like length and methods like reverse, sort, push and pop.
+    Javascript comes with many useful built-in objects.
+    You can also make your own objects.
+
+    One way to create an object is to create a variable and assign it to a pair of curly braces.
+    Something that describes the object is called its property.
+    To add properties to this object, you can add a set of key-value pairs for each piece of data.
+    Something that the object can do is called a method. i.e., it is a function that is associated with an object.
+
+
+    Primitive datatypes: strings, boolean, numbers, null and undefined.
+
+
+    OBJECTS: Objects are a datastructure in JavaScript that lets you store data about a particular thing, and helps you keep track of that data by using a "key".
+    OBJECT LITERAL NOTATION:
+      *The "key" (representing a property or method name) and its "value" are separated from each other by a colon
+      *The key: value pairs are separated from each other by commas
+      *The entire object is wrapped inside curly braces { }.
+
+      You can also add methods to the object in the key-value notation in the same way properties are added. The only difference is that the value will be a function.
+
+      To retrieve information about an object there are two ways:
+        box notation: object_name["key"]
+        dot notation: object_name.key
+        *** While using bracket notation, use quotes.
+
+    NAMING CONVENTION/BEST PRACTICES WHILE MAKING OBJECTS:
+      Do not use quotes while writing keys. Eg., "name": "Vishnu" is not wrong, but a bad idea because it can mask some problems which inturn will cause problems when using dot notation.
+      Do not start the keys with a number.
+      Do not use spaces and hyphens while making keys.
+
+
+    The above rules also apply for variable names.

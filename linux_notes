@@ -1,0 +1,92 @@
+Reason's for using a command line interface:
+	Command line interface is programmable
+	Efficient in terms of network bandwidth
+	Can edit files in a distants system/server without having to transfer them onto your local computer
+	You can be much more expressive with CLI
+	Another important use is to administer servers which may be far away and do not have a GUI
+
+Difference between terminal and shell:
+	terminal is a program that draws text in a window and lets you type things in a keyboard
+	The terminal itself doesn't know what to do with the input. it needs another program to do that like the shell
+  The shell interprets the command, figures out what program you want to run, runs it and sends the output back to the terminal
+  The terminal could run something other than the shell, like a python interpreter.
+  There are many different shell programs. The default on linux and mac is the gnu bash. there are others called tcsh, ksh and seashell
+	The shell can also be used without the terminal. you can save your command onto a file and arrange for your computer to run the shell program on that file. This is called shell scripting.
+	The command name is the first word. argument makes up the rest of the commad
+
+Functions and shell commands are similar but they are used in different contexts:
+	Functions are used to organize a program while shell commands are used to run a program.
+	If there is a quote in the command, the command will continue till the next quote
+	To use a ' in a command you will have to add a \ before the quote
+
+SHELL COMMANDS
+FILE NAMES:
+	The linux file system doesn't require that you have a certain file extensions for cetrain kinds of files
+	pem:	privacy enhanced mail
+	sh:		shell command extension
+	Files starting with a . do are hidden. normally used to hide useless files
+
+COMMANDS
+	man:			manual pages for help. For example: man cowsay. 	man uses another program called less that knows how to display text.
+	less:			use D/space bar to scroll down one page at a time. Use U to scroll up one page at a time. > < to get to last and first line. type line number to get to a particular line number. Search using /. press n to find the next occurance of the search term. previous occurrance with N.
+	pwd:			shows path to the working directory
+	cd:				change directory. Also it changes directory to home directory if there are no arguments
+	cd..:			go to the parent of the working directory
+	ls:				lists all the files in the directory
+	mv:				moves files. move file_to_move file_to_move_it_to. it can also be used to rename files or move several files into a directory
+	cp:				copy
+	mkrir:		make new directories
+	rmdir:		remove directory. It doesn't work if the directory is not empty
+	rm:				To delete a file
+	rm -r:		to remove a directory that is not empty
+	rm -rf:		removes all files and directories in your system. r stands for recursive and f stands for force. DANGER!
+	curl:			curl is a command to download files from the web
+	expr: 		arithmatic expressions
+	echo:			print
+	uname:		os name
+	hostname:	computername
+	host:			looks up a name in DNS
+	bash --version: version of the SHELL
+	history:	shows all the previous commands you ran
+	ctrl+R:		reverse-i-search.
+	unzip:		unzips the specified zip file
+	cat:			prints out the contents of the files. Used popularly as the go to command to read short files. It can also be used with two files.
+	wc:				tells you the number of lines, word and bytes in the file
+	diff:			it compares files and tells you how they differ. Useful when you have multiple versions of the same file and you want to find out how they are different
+
+	Some commands take over the shell for as long as they are running and finally return it when it exits. Like,
+	ping:		lets you check if another machine on the internet is alive and how long it takes to send a message to that machine and back
+
+	LINE BASED PROGRAMS: reads from keyboard input and writes back on the terminal screen. To show the end of input you have to type ctrl+D. Like,
+	sort:		sorts input in alpabetical order. ctrl+c will just cause it to exit without giving output
+	bc:			simple calculator
+	ctrl+c:	interrupt signal
+	ctrl+D:	end of file
+
+	glob: pattern matching for file names.
+		x*	    anything starting with x
+		*x	    anything ending with x
+		*x*	    anything with x in between
+		{}	    match any entry(string) inside it
+		?				match a single letter
+		[]	    match any single letter inside it
+
+Terminal based text editors can be used to edit text in a remote system without pullign the data onto your local system. Eg. of terminal baseed text editors:
+		vim
+		emacs
+		joe
+		nano(is the easiest one preloaded in linux)
+
+INTRODUCTION TO FILE SYSTEM
+Two kinds of objects are stored in the linux file system - files and directories
+files: like text files, images etc.
+directories: named containers that can hold files, directories and other objects
+file names in linux can contain any character except /
+whenever you name a file with punctuation marks/special characters or spaces, remember to put the name in quotes or precede each character with a \. This is called escaping
+Directories are nested inside each other, with the outer most being root represented by /.
+The shell has a working directory i.e., the directory that it is looking at
+absolute path: full path of file or directory from the root
+relative path: path relative to the currently woeking directory
+cd ../linux refers to the parent directory of the directory called linux (musigma_labs)
+cd ./courses refers to a directory in the current working directory (cwd)
+~ is an abbreviation to your own home directory
